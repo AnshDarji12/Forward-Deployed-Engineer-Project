@@ -1,0 +1,449 @@
+{
+  "_note": "C-100–C-103 and TR-4521–TR-4530 are the original assignment fixtures — do not rename those records. TR-4531+ and C-104+ are extra demo catalog for richer agent practice.",
+  "customers": [
+    { "customer_id": "C-100", "name": "Ananya Rao", "email": "ananya.rao@example.com", "phone": "+91-98765-10001" },
+    { "customer_id": "C-101", "name": "Marcus Bell", "email": "marcus.bell@example.com", "phone": "+1-415-555-0102" },
+    { "customer_id": "C-102", "name": "Priya Nair", "email": "priya.nair@example.com", "phone": "+91-98765-10003" },
+    { "customer_id": "C-103", "name": "Diego Ramos", "email": "diego.ramos@example.com", "phone": "+34-600-555-104" },
+    { "customer_id": "C-104", "name": "Meera Shah", "email": "meera.shah@example.com", "phone": "+91-98765-10005" },
+    { "customer_id": "C-105", "name": "Rohan Iyer", "email": "rohan.iyer@example.com", "phone": "+91-98765-10006" },
+    { "customer_id": "C-106", "name": "Sara Khan", "email": "sara.khan@example.com", "phone": "+91-98765-10007" },
+    { "customer_id": "C-107", "name": "Kenji Sato", "email": "kenji.sato@example.com", "phone": "+91-98765-10008" },
+    { "customer_id": "C-108", "name": "Leila Haddad", "email": "leila.haddad@example.com", "phone": "+91-98765-10009" },
+    { "customer_id": "C-109", "name": "Omar Farouk", "email": "omar.farouk@example.com", "phone": "+91-98765-10010" },
+    { "customer_id": "C-110", "name": "Nina Patel", "email": "nina.patel@example.com", "phone": "+91-98765-10011" }
+  ],
+  "orders": [
+    {
+      "order_id": "TR-4521",
+      "customer_id": "C-100",
+      "status": "in_transit",
+      "placed_at": "2026-07-20T10:14:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-07-31",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8871209341",
+      "payment_method": "prepaid_card",
+      "shipping_city": "Bengaluru",
+      "items": [
+        { "sku": "TR-DRS-014", "name": "Linen Wrap Dress", "category": "apparel", "size": "M", "qty": 1, "price": 3499, "final_sale": false }
+      ],
+      "total": 3499
+    },
+    {
+      "order_id": "TR-4522",
+      "customer_id": "C-101",
+      "status": "delivered",
+      "placed_at": "2026-07-08T16:40:00Z",
+      "delivered_at": "2026-07-14T09:20:00Z",
+      "expected_delivery": "2026-07-14",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5520998112",
+      "payment_method": "credit_card",
+      "shipping_city": "Mumbai",
+      "items": [
+        { "sku": "TR-TSH-002", "name": "Everyday Cotton Tee", "category": "apparel", "size": "L", "qty": 2, "price": 899, "final_sale": false },
+        { "sku": "TR-SOK-031", "name": "Ankle Socks 3-pack", "category": "innerwear", "size": "FS", "qty": 1, "price": 499, "final_sale": false }
+      ],
+      "total": 2297
+    },
+    {
+      "order_id": "TR-4523",
+      "customer_id": "C-102",
+      "status": "delivered",
+      "placed_at": "2026-05-30T11:05:00Z",
+      "delivered_at": "2026-06-05T15:55:00Z",
+      "expected_delivery": "2026-06-04",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8870114522",
+      "payment_method": "cash_on_delivery",
+      "shipping_city": "Chennai",
+      "items": [
+        { "sku": "TR-JKT-008", "name": "Quilted Bomber Jacket", "category": "apparel", "size": "S", "qty": 1, "price": 5999, "final_sale": false }
+      ],
+      "total": 5999,
+      "_note_for_designers": "Delivered 2026-06-05, well outside the 30-day return window. Return must be refused."
+    },
+    {
+      "order_id": "TR-4524",
+      "customer_id": "C-100",
+      "status": "partially_shipped",
+      "placed_at": "2026-07-22T08:30:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-08-02",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5521440087",
+      "payment_method": "upi",
+      "shipping_city": "Bengaluru",
+      "items": [
+        { "sku": "TR-JNS-021", "name": "High-Rise Straight Jeans", "category": "apparel", "size": "28", "qty": 1, "price": 2799, "final_sale": false, "shipped": true },
+        { "sku": "TR-BLT-005", "name": "Woven Leather Belt", "category": "accessories", "size": "M", "qty": 1, "price": 1299, "final_sale": false, "shipped": false, "backorder_eta": "2026-08-09" }
+      ],
+      "total": 4098
+    },
+    {
+      "order_id": "TR-4525",
+      "customer_id": "C-103",
+      "status": "delayed",
+      "placed_at": "2026-07-05T19:12:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-07-15",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8870553301",
+      "payment_method": "credit_card",
+      "shipping_city": "Hyderabad",
+      "items": [
+        { "sku": "TR-SNK-017", "name": "Court Sneakers", "category": "footwear", "size": "42", "qty": 1, "price": 4499, "final_sale": false }
+      ],
+      "total": 4499,
+      "_note_for_designers": "14 days past expected delivery. Customer is likely upset; a good agent acknowledges the delay before quoting policy."
+    },
+    {
+      "order_id": "TR-4526",
+      "customer_id": "C-101",
+      "status": "lost_in_transit",
+      "placed_at": "2026-06-28T13:00:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-07-06",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5519002244",
+      "payment_method": "credit_card",
+      "shipping_city": "Mumbai",
+      "items": [
+        { "sku": "TR-BAG-011", "name": "Canvas Tote", "category": "accessories", "size": "FS", "qty": 1, "price": 1899, "final_sale": false }
+      ],
+      "total": 1899,
+      "_note_for_designers": "Carrier marked lost. Policy says this is NOT a return — it is a lost-parcel claim and must be escalated to a human."
+    },
+    {
+      "order_id": "TR-4527",
+      "customer_id": "C-102",
+      "status": "delivered",
+      "placed_at": "2026-07-18T07:45:00Z",
+      "delivered_at": "2026-07-23T12:10:00Z",
+      "expected_delivery": "2026-07-24",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8871773900",
+      "payment_method": "upi",
+      "shipping_city": "Chennai",
+      "items": [
+        { "sku": "TR-EAR-042", "name": "Pearl Drop Earrings", "category": "jewellery", "size": "FS", "qty": 1, "price": 1599, "final_sale": false }
+      ],
+      "total": 1599,
+      "_note_for_designers": "Within 30 days, BUT jewellery is non-returnable for hygiene reasons. Return must be refused on category grounds, not date grounds."
+    },
+    {
+      "order_id": "TR-4528",
+      "customer_id": "C-103",
+      "status": "delivered",
+      "placed_at": "2026-07-12T09:00:00Z",
+      "delivered_at": "2026-07-19T17:30:00Z",
+      "expected_delivery": "2026-07-20",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5520771456",
+      "payment_method": "cash_on_delivery",
+      "shipping_city": "Hyderabad",
+      "items": [
+        { "sku": "TR-SHR-009", "name": "Oxford Shirt", "category": "apparel", "size": "M", "qty": 1, "price": 2299, "final_sale": true }
+      ],
+      "total": 2299,
+      "_note_for_designers": "Within window and a returnable category, but marked FINAL SALE — exchange only, no refund."
+    },
+    {
+      "order_id": "TR-4529",
+      "customer_id": "C-100",
+      "status": "cancelled",
+      "placed_at": "2026-07-25T21:05:00Z",
+      "delivered_at": null,
+      "expected_delivery": null,
+      "carrier": null,
+      "tracking_number": null,
+      "payment_method": "upi",
+      "shipping_city": "Bengaluru",
+      "items": [
+        { "sku": "TR-SCF-027", "name": "Silk Scarf", "category": "accessories", "size": "FS", "qty": 1, "price": 1799, "final_sale": false }
+      ],
+      "total": 1799,
+      "cancelled_at": "2026-07-26T06:40:00Z",
+      "refund_status": "processed",
+      "_note_for_designers": "Already cancelled and refunded. A return request here is nonsensical and the agent should say so."
+    },
+    {
+      "order_id": "TR-4530",
+      "customer_id": "C-101",
+      "status": "delivered",
+      "placed_at": "2026-07-21T14:22:00Z",
+      "delivered_at": "2026-07-26T11:00:00Z",
+      "expected_delivery": "2026-07-27",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8871990012",
+      "payment_method": "credit_card",
+      "shipping_city": "Mumbai",
+      "items": [
+        { "sku": "TR-KRT-033", "name": "Block-Print Kurta", "category": "apparel", "size": "L", "qty": 1, "price": 2199, "final_sale": false }
+      ],
+      "total": 2199,
+      "_note_for_designers": "The clean happy-path return: in window, returnable category, not final sale."
+    },
+    {
+      "order_id": "TR-4531",
+      "customer_id": "C-104",
+      "status": "delivered",
+      "placed_at": "2026-07-30T11:20:00Z",
+      "delivered_at": "2026-08-03T08:15:00Z",
+      "expected_delivery": "2026-08-03",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8872104401",
+      "payment_method": "upi",
+      "shipping_city": "Ahmedabad",
+      "items": [
+        { "sku": "TR-DRS-022", "name": "Seersucker Midi Dress", "category": "apparel", "size": "S", "qty": 1, "price": 3899, "final_sale": false }
+      ],
+      "total": 3899,
+      "_note_for_designers": "Delivered 2026-08-03 vs reference 2026-08-04 — within 48-hour damaged/wrong-item window."
+    },
+    {
+      "order_id": "TR-4532",
+      "customer_id": "C-104",
+      "status": "delivered",
+      "placed_at": "2026-07-18T09:00:00Z",
+      "delivered_at": "2026-07-22T16:40:00Z",
+      "expected_delivery": "2026-07-23",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5522108811",
+      "payment_method": "credit_card",
+      "shipping_city": "Ahmedabad",
+      "items": [
+        { "sku": "TR-TSH-019", "name": "Slub Knit Tee", "category": "apparel", "size": "M", "qty": 1, "price": 999, "final_sale": false }
+      ],
+      "total": 999,
+      "_note_for_designers": "Damage claim too late — delivered 13 days before reference date, outside 48 hours."
+    },
+    {
+      "order_id": "TR-4533",
+      "customer_id": "C-105",
+      "status": "delivered",
+      "placed_at": "2026-07-20T13:30:00Z",
+      "delivered_at": "2026-07-25T10:05:00Z",
+      "expected_delivery": "2026-07-26",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8872201190",
+      "payment_method": "upi",
+      "shipping_city": "Pune",
+      "items": [
+        { "sku": "TR-FRG-004", "name": "Citrus Eau de Parfum 50ml", "category": "fragrance", "size": "50ml", "qty": 1, "price": 2499, "final_sale": false }
+      ],
+      "total": 2499,
+      "_note_for_designers": "In window but fragrance is non-returnable (policy 2.3)."
+    },
+    {
+      "order_id": "TR-4534",
+      "customer_id": "C-106",
+      "status": "delivered",
+      "placed_at": "2026-07-15T18:00:00Z",
+      "delivered_at": "2026-07-16T09:00:00Z",
+      "expected_delivery": "2026-07-16",
+      "carrier": "Email",
+      "tracking_number": "GC-DELIVERED-4534",
+      "payment_method": "credit_card",
+      "shipping_city": "New Delhi",
+      "items": [
+        { "sku": "TR-GFT-001", "name": "Trendly Gift Card ₹2000", "category": "gift cards", "size": "FS", "qty": 1, "price": 2000, "final_sale": true }
+      ],
+      "total": 2000,
+      "_note_for_designers": "Gift cards cannot be returned or exchanged."
+    },
+    {
+      "order_id": "TR-4535",
+      "customer_id": "C-107",
+      "status": "delivered",
+      "placed_at": "2026-07-19T08:40:00Z",
+      "delivered_at": "2026-07-24T14:20:00Z",
+      "expected_delivery": "2026-07-25",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5522306677",
+      "payment_method": "credit_card",
+      "shipping_city": "Kolkata",
+      "items": [
+        { "sku": "TR-SNK-024", "name": "Runner Sneakers", "category": "footwear", "size": "43", "qty": 1, "price": 5299, "final_sale": false }
+      ],
+      "total": 5299,
+      "_note_for_designers": "Footwear returnable; ask about original shoe box (₹300 deduction if missing)."
+    },
+    {
+      "order_id": "TR-4536",
+      "customer_id": "C-108",
+      "status": "processing",
+      "placed_at": "2026-08-04T04:10:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-08-09",
+      "carrier": null,
+      "tracking_number": null,
+      "payment_method": "upi",
+      "shipping_city": "Jaipur",
+      "items": [
+        { "sku": "TR-JNS-030", "name": "Wide-Leg Denim", "category": "apparel", "size": "30", "qty": 1, "price": 2999, "final_sale": false }
+      ],
+      "total": 2999,
+      "_note_for_designers": "Not dispatched yet — address change is still allowed (policy 1.7). Return window has not started."
+    },
+    {
+      "order_id": "TR-4537",
+      "customer_id": "C-109",
+      "status": "delivered",
+      "placed_at": "2026-07-22T12:00:00Z",
+      "delivered_at": "2026-07-28T11:45:00Z",
+      "expected_delivery": "2026-07-29",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8872409088",
+      "payment_method": "cash_on_delivery",
+      "shipping_city": "Kochi",
+      "items": [
+        { "sku": "TR-SHT-015", "name": "Linen Camp Shirt", "category": "apparel", "size": "L", "qty": 1, "price": 2499, "final_sale": false }
+      ],
+      "total": 2499,
+      "_note_for_designers": "COD refundable return — agent must NOT collect bank details in chat (policy 3.3)."
+    },
+    {
+      "order_id": "TR-4538",
+      "customer_id": "C-100",
+      "status": "delivered",
+      "placed_at": "2026-07-27T15:10:00Z",
+      "delivered_at": "2026-08-01T09:30:00Z",
+      "expected_delivery": "2026-08-01",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5522503310",
+      "payment_method": "upi",
+      "shipping_city": "Bengaluru",
+      "items": [
+        { "sku": "TR-MSK-003", "name": "Silk Sleep Mask", "category": "face masks", "size": "FS", "qty": 1, "price": 799, "final_sale": false }
+      ],
+      "total": 799,
+      "_note_for_designers": "Face masks are non-returnable for hygiene (policy 2.3)."
+    },
+    {
+      "order_id": "TR-4539",
+      "customer_id": "C-110",
+      "status": "delayed",
+      "placed_at": "2026-07-21T07:55:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-07-28",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8872607744",
+      "payment_method": "credit_card",
+      "shipping_city": "Surat",
+      "items": [
+        { "sku": "TR-BLZ-006", "name": "Cropped Blazer", "category": "apparel", "size": "M", "qty": 1, "price": 4599, "final_sale": false }
+      ],
+      "total": 4599,
+      "_note_for_designers": "Delayed past expected delivery — qualifies for ₹250 delay credit (policy 1.5)."
+    },
+    {
+      "order_id": "TR-4540",
+      "customer_id": "C-102",
+      "status": "delivered",
+      "placed_at": "2026-07-16T10:00:00Z",
+      "delivered_at": "2026-07-21T13:10:00Z",
+      "expected_delivery": "2026-07-22",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5522701199",
+      "payment_method": "upi",
+      "shipping_city": "Chennai",
+      "items": [
+        { "sku": "TR-KRT-041", "name": "Ikat Kurta", "category": "apparel", "size": "M", "qty": 1, "price": 2399, "final_sale": false },
+        { "sku": "TR-BTY-012", "name": "Tinted Lip Balm", "category": "beauty", "size": "FS", "qty": 1, "price": 649, "final_sale": false }
+      ],
+      "total": 3048,
+      "_note_for_designers": "Mixed cart: kurta returnable, lip balm (beauty) is not. Agent must ask for SKU."
+    },
+    {
+      "order_id": "TR-4541",
+      "customer_id": "C-105",
+      "status": "cancelled",
+      "placed_at": "2026-08-02T20:15:00Z",
+      "delivered_at": null,
+      "expected_delivery": null,
+      "carrier": null,
+      "tracking_number": null,
+      "payment_method": "credit_card",
+      "shipping_city": "Pune",
+      "items": [
+        { "sku": "TR-HOD-018", "name": "Fleece Hoodie", "category": "apparel", "size": "XL", "qty": 1, "price": 3299, "final_sale": false }
+      ],
+      "total": 3299,
+      "cancelled_at": "2026-08-03T07:05:00Z",
+      "refund_status": "pending",
+      "_note_for_designers": "Cancelled with refund still pending — explain timeline, do not raise a return."
+    },
+    {
+      "order_id": "TR-4542",
+      "customer_id": "C-110",
+      "status": "in_transit",
+      "placed_at": "2026-08-02T09:30:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-08-06",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8872805566",
+      "payment_method": "upi",
+      "shipping_city": "Surat",
+      "items": [
+        { "sku": "TR-TRS-011", "name": "Pleated Trousers", "category": "apparel", "size": "28", "qty": 1, "price": 2699, "final_sale": false }
+      ],
+      "total": 2699,
+      "_note_for_designers": "After dispatch — address cannot be changed; refuse delivery and reorder (policy 1.7)."
+    },
+    {
+      "order_id": "TR-4543",
+      "customer_id": "C-107",
+      "status": "delivered",
+      "placed_at": "2026-07-10T11:00:00Z",
+      "delivered_at": "2026-07-16T18:00:00Z",
+      "expected_delivery": "2026-07-17",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5522904402",
+      "payment_method": "credit_card",
+      "shipping_city": "Kolkata",
+      "items": [
+        { "sku": "TR-JKT-014", "name": "Utility Overshirt", "category": "apparel", "size": "L", "qty": 1, "price": 4199, "final_sale": true },
+        { "sku": "TR-CAP-008", "name": "Washed Cap", "category": "accessories", "size": "FS", "qty": 1, "price": 899, "final_sale": false }
+      ],
+      "total": 5098,
+      "_note_for_designers": "Overshirt is final-sale (exchange only); cap is a normal return. Specify SKU."
+    },
+    {
+      "order_id": "TR-4544",
+      "customer_id": "C-108",
+      "status": "lost_in_transit",
+      "placed_at": "2026-07-12T16:20:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-07-20",
+      "carrier": "Delhivery",
+      "tracking_number": "DL5523001188",
+      "payment_method": "upi",
+      "shipping_city": "Jaipur",
+      "items": [
+        { "sku": "TR-BAG-020", "name": "Weekender Duffle", "category": "accessories", "size": "FS", "qty": 1, "price": 3499, "final_sale": false }
+      ],
+      "total": 3499,
+      "_note_for_designers": "Second lost-parcel case — must escalate, not treat as a return."
+    },
+    {
+      "order_id": "TR-4545",
+      "customer_id": "C-106",
+      "status": "partially_shipped",
+      "placed_at": "2026-07-29T08:00:00Z",
+      "delivered_at": null,
+      "expected_delivery": "2026-08-05",
+      "carrier": "BlueDart",
+      "tracking_number": "BD8873102299",
+      "payment_method": "credit_card",
+      "shipping_city": "New Delhi",
+      "items": [
+        { "sku": "TR-DRS-028", "name": "Poplin Shirt Dress", "category": "apparel", "size": "M", "qty": 1, "price": 3299, "final_sale": false, "shipped": true },
+        { "sku": "TR-BLT-012", "name": "Suede Belt", "category": "accessories", "size": "S", "qty": 1, "price": 1499, "final_sale": false, "shipped": false, "backorder_eta": "2026-08-12" }
+      ],
+      "total": 4798,
+      "_note_for_designers": "Partial shipment — available item already shipped; belt still backordered (policy 1.4)."
+    }
+  ]
+}

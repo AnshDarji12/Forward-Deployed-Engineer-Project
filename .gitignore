@@ -1,0 +1,46 @@
+# Environments & Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.cert
+*.pfx
+secrets/
+credentials.json
+
+# Personal & resume documents
+*Resume*
+*resume*
+A031_*
+scripts/generate_resume.py
+scripts/generate_e2m_interview_pdf.py
+docs/E2M_Interview_Short_Answers.pdf
+*.pdf
+*.docx
+
+
+# Python & Virtual Environments
+.venv/
+venv/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+
+# Testing & Coverage
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.log
+
+# Operating System & IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
