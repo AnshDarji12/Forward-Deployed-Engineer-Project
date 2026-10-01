@@ -1,6 +1,5 @@
 # Trendly Agentic Support Assistant
 
-Yellow.ai · Forward Deployed Engineer (Intern) · Screening Assignment
 
 An **agentic** customer-support assistant for Trendly (D2C fashion) built with:
 
